@@ -1,0 +1,10 @@
+<h3>Parent Component</h3>
+<div>
+  <label for="message-input"> Message from parent :</label>
+</div>
+<div>
+  <label for="message-input">Message</label>
+  <input [(ngModel)]="toSend" (ngModelChange)="sendName($event)" />
+</div>
+<child [employeeName]="toSend" (toParent)="dispalyChild($event)"></child>
+{{ newValue | json }}
